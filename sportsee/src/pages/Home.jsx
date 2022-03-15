@@ -6,7 +6,8 @@ function Home() {
   return ( 
     <HomePageContainer>
       <VerticalBar />
-      PUOU
+      <div>
+      </div>
     </HomePageContainer>
   );
 }

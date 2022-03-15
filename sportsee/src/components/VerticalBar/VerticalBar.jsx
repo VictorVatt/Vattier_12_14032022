@@ -1,4 +1,4 @@
-import { VerticalBarContainer, IconContainer } from './VerticalBarStyle'
+import { VerticalBarContainer, IconPartContainer, IconContainer, Icon, Copyright } from './VerticalBarStyle'
 import yogaIcon from '../../assets/yoga-icon.svg'
 import swimmingIcon from '../../assets/swimming-icon.svg'
 import veloIcon from '../../assets/velo-icon.svg'
@@ -8,11 +8,13 @@ function VerticalBar() {
     
     return (
         <VerticalBarContainer>
-            <IconContainer><img src={yogaIcon} alt='icon de sport'/></IconContainer>
-            <IconContainer><img src={swimmingIcon} alt='icon de sport'/></IconContainer>
-            <IconContainer><img src={veloIcon} alt='icon de sport'/></IconContainer>
-            <IconContainer><img src={muscuIcon} alt='icon de sport'/></IconContainer>
-            Pipi
+            <IconPartContainer>
+                <IconContainer><Icon src={yogaIcon} alt='icon de sport'/></IconContainer>
+                <IconContainer><Icon src={swimmingIcon} alt='icon de sport'/></IconContainer>
+                <IconContainer><Icon src={veloIcon} alt='icon de sport'/></IconContainer>
+                <IconContainer><Icon src={muscuIcon} alt='icon de sport'/></IconContainer>
+            </IconPartContainer>
+            <Copyright>Copiryght, SportSee 2020</Copyright>
         </VerticalBarContainer>
     )
 }

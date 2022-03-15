@@ -12,7 +12,7 @@ export const HeaderLogo = styled.img`
 export const HeaderNav = styled.nav`
     margin-right: 59px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 994px; 
     `
 export const HeaderLink = styled.a`

@@ -8,11 +8,12 @@ function ActivityChart( {data} ) {
             <BarChart width={702} height={200} data={data}>
                 <CartesianGrid strokeDasharray="1 3" />
                 <XAxis />
-                <YAxis tick={{fill: "#9B9EAC"}} stroke="none" dataKey={"kilogram"} />
+                <YAxis tick={{fill: "#9B9EAC"}} stroke="none" dataKey={"kilogram"} orientation='right' yAxisId="kilogram" domain={['dataMin - 1', 'dataMax +1']}/>
+                <YAxis  stroke="none" dataKey={"calories"} yAxisId='calories' />
                 <Tooltip />
                 <Legend />
-                <Bar dataKey="calories" fill="#E60000" barSize={5} radius={[5, 5, 0, 0]} />
-                <Bar dataKey="kilogram" fill="#282D30" barSize={5}  radius={[5, 5, 0, 0]}/>
+                <Bar dataKey="calories" fill="#E60000" barSize={5} radius={[5, 5, 0, 0]} yAxisId="calories"/>
+                <Bar dataKey="kilogram" fill="#282D30" barSize={5}  radius={[5, 5, 0, 0]} yAxisId="kilogram"/>
          </BarChart>
 
 

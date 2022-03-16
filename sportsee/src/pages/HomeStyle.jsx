@@ -20,6 +20,8 @@ export const HeaderContent = styled.p`
 export const ChartsContainer = styled.div`
     display: flex;
 `
-
+export const SquareCharts = styled.div`
+    display:flex;
+    `
 export const NutritiveCardContainer = styled.div`
     margin-left: 31px;`

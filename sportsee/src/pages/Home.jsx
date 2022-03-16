@@ -1,9 +1,10 @@
 import VerticalBar from '../components/VerticalBar/VerticalBar';
 import NutritiveCard from '../components/NutritiveCount/NutritiveCard';
 import ActivityChart from '../components/ActivityChart/ActivityChart';
+import ScoreChart from '../components/ScoreChart/ScoreChart';
 import PerformanceChart from '../components/PerformanceChart/PerformanceChart'
 import { userInformations, userActivity, userPerformance } from '../mockedData/mockedData';
-import { HomePageContainer, MainContentContainer, MainTitle, HeaderContent, ChartsContainer, NutritiveCardContainer } from './HomeStyle';
+import { HomePageContainer, MainContentContainer, MainTitle, HeaderContent, ChartsContainer, NutritiveCardContainer, SquareCharts } from './HomeStyle';
 import '../styles/Home.css'
 
 function Home() {
@@ -16,9 +17,10 @@ function Home() {
         <ChartsContainer>
           <div>
             <ActivityChart data={userActivity.data.sessions} />
-            <div>
+            <SquareCharts>
               <PerformanceChart data={userPerformance.data} />
-            </div>
+              <ScoreChart />
+            </SquareCharts>
           </div>
           <NutritiveCardContainer>
               <NutritiveCard type={"Calories"} quantity={userInformations.data.keyData.calorieCount} />

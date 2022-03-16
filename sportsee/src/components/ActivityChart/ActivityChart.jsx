@@ -15,8 +15,6 @@ function ActivityChart( {data} ) {
                 <Bar dataKey="calories" fill="#E60000" barSize={5} radius={[5, 5, 0, 0]} yAxisId="calories"/>
                 <Bar dataKey="kilogram" fill="#282D30" barSize={5}  radius={[5, 5, 0, 0]} yAxisId="kilogram"/>
          </BarChart>
-
-
         </BarChartContainer>
     )
 }

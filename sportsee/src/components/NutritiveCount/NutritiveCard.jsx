@@ -3,7 +3,7 @@ import proteineIcon from '../../assets/proteine-icon.svg'
 import glucideIcon from '../../assets/glucide-icon.svg'
 import lipideIcon from '../../assets/lipide-icon.svg'
 
-import { IconContainer, CardContainer, ContentContainer, Icon} from './NutritiveCardStyle'
+import { IconContainer, CardContainer, ContentContainer, Icon, Quantity, NutritiveType} from './NutritiveCardStyle'
 
 function NutritiveCard( { type, quantity } ) {
     let icon
@@ -26,8 +26,8 @@ function NutritiveCard( { type, quantity } ) {
                 <Icon src={icon} alt="icon de nutriment" />
             </IconContainer>
             <ContentContainer>
-                <h3>{quantity}{unity}</h3>
-                <p>{type}</p>
+                <Quantity>{quantity} {unity}</Quantity>
+                <NutritiveType>{type}</NutritiveType>
             </ContentContainer>
         </CardContainer>
     )

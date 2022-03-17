@@ -2,8 +2,9 @@ import VerticalBar from '../components/VerticalBar/VerticalBar';
 import NutritiveCard from '../components/NutritiveCount/NutritiveCard';
 import ActivityChart from '../components/ActivityChart/ActivityChart';
 import ScoreChart from '../components/ScoreChart/ScoreChart';
+import AverageDurationChart from '../components/AverageDurationChart/AverageDurationChart';
 import PerformanceChart from '../components/PerformanceChart/PerformanceChart'
-import { userInformations, userActivity, userPerformance } from '../mockedData/mockedData';
+import { userInformations, userActivity, userPerformance, userAverageSession } from '../mockedData/mockedData';
 import { HomePageContainer, MainContentContainer, MainTitle, HeaderContent, ChartsContainer, NutritiveCardContainer, SquareCharts } from './HomeStyle';
 import '../styles/Home.css'
 
@@ -18,6 +19,7 @@ function Home() {
           <div>
             <ActivityChart data={userActivity.data.sessions} />
             <SquareCharts>
+              <AverageDurationChart data={userAverageSession.data.sessions} />
               <PerformanceChart data={userPerformance.data} />
               <ScoreChart data={userInformations.data.score} />
             </SquareCharts>

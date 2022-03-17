@@ -6,8 +6,8 @@ function PerformanceChart( { data } ) {
     return (
         <RadarChartContainer>
             <RadarChart outerRadius={80} width={250} height={250} data={data.data}>
-                <PolarGrid />
-                <PolarAngleAxis  dataKey="kind" tick={{fill: "white", fontSize: "12px"}} tickSize={10}/>
+                <PolarGrid radialLines={false} />
+                <PolarAngleAxis  dataKey="kind" tick={{fill: "white", fontSize: "12px"}} tickSize={10} />
                 <Radar  dataKey='value' fill="#FF0101" fillOpacity={0.6} />
             </RadarChart>
         </RadarChartContainer>

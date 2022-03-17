@@ -19,7 +19,7 @@ function Home() {
             <ActivityChart data={userActivity.data.sessions} />
             <SquareCharts>
               <PerformanceChart data={userPerformance.data} />
-              <ScoreChart />
+              <ScoreChart data={userInformations.data.score} />
             </SquareCharts>
           </div>
           <NutritiveCardContainer>

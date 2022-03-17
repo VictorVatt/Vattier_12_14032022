@@ -21,7 +21,9 @@ export const ChartsContainer = styled.div`
     display: flex;
 `
 export const SquareCharts = styled.div`
+    margin-top: 28px;
     display:flex;
+    justify-content: space-between;
     `
 export const NutritiveCardContainer = styled.div`
     margin-left: 31px;`

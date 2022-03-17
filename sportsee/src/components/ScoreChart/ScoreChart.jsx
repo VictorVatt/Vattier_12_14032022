@@ -1,28 +1,20 @@
-import { RadialBarChart, RadialBar, Legend, ResponsiveContainer, Tooltip } from 'recharts';
-
-const data = [
-  {
-    "score": 2,
-  },
-
-];
+import { RadialBarChart, RadialBar, PolarAngleAxis } from 'recharts';
 
 
-function ScoreChart() {
+import { WhiteCircle, ScoreChartContainer, TextLegend, Objectif } from './ScoreChartStyle';
 
 
+function ScoreChart( { data }) {
+    let dataFormat = [{ "score": data }]
     return (
-        <RadialBarChart 
-  width={250} 
-  height={250} 
-  innerRadius="70%" 
-  outerRadius="80%" 
-  data={data}
-  barSize={5} 
->
-  <RadialBar minAngle={30} maxAngle={1} label={{ fill: 'red', position: 'bottom' }} background clockWise={true} dataKey='score' />
-  <Tooltip />
-</RadialBarChart>
+      <ScoreChartContainer>
+        <TextLegend>Score</TextLegend>
+        <WhiteCircle>{data * 100}% <Objectif>de votre objectif</Objectif></WhiteCircle>
+        <RadialBarChart width={200} height={200} data={dataFormat} innerRadius={86} outerRadius={100} startAngle={220} endAngle={-140}>
+          <PolarAngleAxis type="number" domain={[0, 1]} dataKey={"score"} angleAxisId={0} tick={false} />
+          <RadialBar  dataKey={"score"} angleAxisId={0} data={dataFormat} fill={"red"}  cornerRadius={10} />
+        </RadialBarChart>
+      </ScoreChartContainer>
     );
 
 }

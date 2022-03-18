@@ -8,4 +8,14 @@ export const ChartContainer = styled.div`
     border-radius: 5px;
     display: flex;
     justify-content: center;
-    align-items: center;`
+    align-items: center;
+    position: relative;`
+
+export const ChartTitle = styled.p`
+    position: absolute;
+    width: 150px;
+    color: white;
+    margin: 0;
+    top: 29px;
+    left: 24px
+    `

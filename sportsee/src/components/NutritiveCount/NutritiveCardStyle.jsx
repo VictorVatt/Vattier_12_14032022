@@ -4,7 +4,7 @@ export const CardContainer = styled.div`
     width: 258px;
     height: 124px;
     display: flex;
-    margin: 0 0 39px 0;
+    margin: 0px 20px 39px 20px;
     align-items: center;
     border-radius: 5px;
     background-color: #FBFBFB;

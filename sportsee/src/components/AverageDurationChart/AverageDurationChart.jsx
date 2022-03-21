@@ -1,4 +1,4 @@
-import { LineChart, XAxis, YAxis, Tooltip, Line, Rectangle} from 'recharts'
+import { LineChart, XAxis, YAxis, Tooltip, Line} from 'recharts'
 import { ChartContainer, ChartTitle } from './AverageDurationChartStyle'
 
 function AverageDurationChart( { data }) {
@@ -29,9 +29,6 @@ function CustomPayloadAverage( { payload, active }) {
     if ( active && payload) {
         return <p style={{width : "39px", height: "25px", textAlign: "center", lineHeight: "24px", backgroundColor: "white", fontSize: "10px", borderRadius: "2px"}}>{`${payload[0].value} min`}</p>
     } return null
-}
-const DottedTooltip = (props) => {
-    console.log(props);
 }
 
 export default AverageDurationChart

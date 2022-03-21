@@ -4,13 +4,13 @@ export const HomePageContainer = styled.div`
     display: flex;`
 
 export const MainContentContainer = styled.div`
-    padding-left: 109px;
-    padding-top: 70px;
+    margin:  0 auto;
+    padding: 0 20px;
     `
 export const MainTitle = styled.h1`
     font-size: 48px;
     font-weight: 500;
-    margin:0;`
+    margin: 61px 0 0 0;`
 
 export const HeaderContent = styled.p`
     font-size: 18px;
@@ -19,6 +19,11 @@ export const HeaderContent = styled.p`
 
 export const ChartsContainer = styled.div`
     display: flex;
+    flex-direction: column-reverse;
+    @media (min-width: 1440px) {
+        flex-direction: row; 
+        margin-top: 77px;
+    }
 `
 export const SquareCharts = styled.div`
     margin-top: 28px;
@@ -26,4 +31,13 @@ export const SquareCharts = styled.div`
     justify-content: space-between;
     `
 export const NutritiveCardContainer = styled.div`
-    margin-left: 31px;`
+    display: flex;
+    margin-top: 77px;
+    justify-content: center;
+    flex-wrap: wrap;
+    @media (min-width: 1440px) {
+        flex-wrap: nowrap;
+        flex-direction: column; 
+        margin-top: 0;
+        margin-left: 31px;
+    }`

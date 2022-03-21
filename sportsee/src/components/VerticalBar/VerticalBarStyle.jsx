@@ -2,14 +2,17 @@ import styled from "styled-components";
 
 export const VerticalBarContainer = styled.div`
     background-color: black;
-    width: 117px;
-    height: 100vh;
+    height: 1197px;
     display:flex;
     flex-direction: column;
     align-items: center;
+    @media (min-width: 1440px) {
+        height: 900px;
+    }
 `
 export const IconPartContainer = styled.div`
     margin-top: 256px;
+    padding: 0 26px;
     `
 
 export const IconContainer = styled.div`
@@ -29,7 +32,7 @@ export const Icon = styled.img`
 export const Copyright = styled.p`
     color: white;
     width: 138px;
-    position: fixed;
-    top: 874px;
+    position: relative;
+    top: 148px;
     transform: rotate(-90deg);
     font-size: 12px;`

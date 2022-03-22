@@ -15,7 +15,7 @@ export const LegendContainer = styled.div`
     display: flex;
     width: 100%;
     justify-content: space-between;
-    margin: 0 0 10px 0;
+    margin: 10px 0 10px 0;
 
 `
 export const LegendItemsContainer = styled.div`

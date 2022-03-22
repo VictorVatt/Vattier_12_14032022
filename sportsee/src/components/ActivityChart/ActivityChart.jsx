@@ -1,8 +1,10 @@
+import { useState } from 'react'
 import { BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Bar, } from 'recharts'
+import ApiProvider from '../../Api/ApiProvider.js'
 import { BarChartContainer, LegendContainer, LegendItemsContainer, LegendItemContainer, RedDot, BlackDot, LegendTitle } from './ActivityChartStyle'
 
-function ActivityChart( {data} ) {
 
+function ActivityChart( {data} ) {
     return (
         
         <BarChartContainer>

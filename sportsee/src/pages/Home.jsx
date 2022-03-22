@@ -1,3 +1,4 @@
+import ApiProvider from '../Api/ApiProvider';
 import VerticalBar from '../components/VerticalBar/VerticalBar';
 import NutritiveCard from '../components/NutritiveCount/NutritiveCard';
 import ActivityChart from '../components/ActivityChart/ActivityChart';

@@ -1,5 +1,5 @@
 import VerticalBar from '../components/VerticalBar/VerticalBar';
-import NutritiveCard from '../components/NutritiveCount/NutritiveCard';
+import NutritiveTracker from '../components/NutritiveTracker/NutritiveTracker';
 import ActivityChart from '../components/ActivityChart/ActivityChart';
 import ScoreChart from '../components/ScoreChart/ScoreChart';
 import AverageDurationChart from '../components/AverageDurationChart/AverageDurationChart';
@@ -25,10 +25,7 @@ function Home() {
             </SquareCharts>
           </div>
           <NutritiveCardContainer>
-              <NutritiveCard type={"Calories"} quantity={userInformations.data.keyData.calorieCount} />
-              <NutritiveCard type={"Proteines"} quantity={userInformations.data.keyData.proteinCount} />
-              <NutritiveCard type={"Glucides"} quantity={userInformations.data.keyData.carbohydrateCount} />
-              <NutritiveCard type={"Lipides"} quantity={userInformations.data.keyData.lipidCount} />
+            <NutritiveTracker id={12}/>
           </NutritiveCardContainer>
         </ChartsContainer>
   

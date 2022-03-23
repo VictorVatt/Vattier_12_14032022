@@ -12,8 +12,6 @@ function PerformanceChart( { id } ) {
             .then( res => setData(res.data.data.data))
     }, [id])
 
-    console.log(data)
-
     function FormatPolarAngleAxis(value) {
         if (value === 1 ) return 'Cardio'
         if (value === 2 ) return 'Energy'

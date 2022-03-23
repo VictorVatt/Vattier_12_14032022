@@ -5,7 +5,6 @@ import { useLocation, useParams } from "react-router"
 import { Route, Routes, BrowserRouter } from "react-router-dom"
 
 function App() {
-
     
     return (
         <div>

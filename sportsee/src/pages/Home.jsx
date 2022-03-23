@@ -4,7 +4,7 @@ import ActivityChart from '../components/ActivityChart/ActivityChart';
 import ScoreChart from '../components/ScoreChart/ScoreChart';
 import AverageDurationChart from '../components/AverageDurationChart/AverageDurationChart';
 import PerformanceChart from '../components/PerformanceChart/PerformanceChart'
-import { userInformations } from '../mockedData/mockedData';
+import Welcome from '../components/Welcome/Welcome';
 import { HomePageContainer, MainContentContainer, MainTitle, HeaderContent, ChartsContainer, NutritiveCardContainer, SquareCharts } from './HomeStyle';
 import '../styles/Home.css'
 
@@ -13,8 +13,7 @@ function Home( { id }) {
     <HomePageContainer>
       <VerticalBar />
       <MainContentContainer>
-        <MainTitle>Bonjour <span style={{color: '#FF0000'}}>{userInformations.data.userInfos.firstName}</span></MainTitle>
-        <HeaderContent>Félicitation ! Vous avez explosé vos objectifs hier 👏</HeaderContent>
+        <Welcome id={id} />
         <ChartsContainer>
           <div>
             <ActivityChart id={id} />

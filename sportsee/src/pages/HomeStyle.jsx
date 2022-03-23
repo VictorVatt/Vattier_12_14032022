@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const HomePageContainer = styled.div`
-    display: flex;`
+    display: flex;
+    height: 100vh;`
 
 export const MainContentContainer = styled.div`
     margin:  0 auto;

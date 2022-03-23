@@ -2,13 +2,10 @@ import styled from "styled-components";
 
 export const VerticalBarContainer = styled.div`
     background-color: black;
-    height: 1197px;
+    height: 100%;
     display:flex;
     flex-direction: column;
     align-items: center;
-    @media (min-width: 1440px) {
-        height: 900px;
-    }
 `
 export const IconPartContainer = styled.div`
     margin-top: 256px;

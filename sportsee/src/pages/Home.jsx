@@ -8,7 +8,7 @@ import { userInformations } from '../mockedData/mockedData';
 import { HomePageContainer, MainContentContainer, MainTitle, HeaderContent, ChartsContainer, NutritiveCardContainer, SquareCharts } from './HomeStyle';
 import '../styles/Home.css'
 
-function Home() {
+function Home( { id }) {
   return ( 
     <HomePageContainer>
       <VerticalBar />
@@ -17,15 +17,15 @@ function Home() {
         <HeaderContent>Félicitation ! Vous avez explosé vos objectifs hier 👏</HeaderContent>
         <ChartsContainer>
           <div>
-            <ActivityChart id={12} />
+            <ActivityChart id={id} />
             <SquareCharts>
-              <AverageDurationChart id={12} />
-              <PerformanceChart id={18} />
-              <ScoreChart id={12} />
+              <AverageDurationChart id={id} />
+              <PerformanceChart id={id} />
+              <ScoreChart id={id} />
             </SquareCharts>
           </div>
           <NutritiveCardContainer>
-            <NutritiveTracker id={12}/>
+            <NutritiveTracker id={id}/>
           </NutritiveCardContainer>
         </ChartsContainer>
   

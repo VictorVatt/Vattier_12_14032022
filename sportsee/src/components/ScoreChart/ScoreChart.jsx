@@ -1,11 +1,22 @@
 import { RadialBarChart, RadialBar, PolarAngleAxis } from 'recharts';
+import { useState, useEffect } from 'react';
+import ApiProvider from '../../Api/ApiProvider';
 
 
 import { WhiteCircle, ScoreChartContainer, TextLegend, Objectif } from './ScoreChartStyle';
 
 
-function ScoreChart( { data }) {
+function ScoreChart( { id }) {
+
+    let [ data, setData ] = useState()
+    
+    useEffect(() => {
+        new ApiProvider().getMainUserData(id)
+            .then( res => setData(res.score))
+    }, [id])
     let dataFormat = [{ "score": data }]
+    console.log(dataFormat)
+
     return (
       <ScoreChartContainer>
         <TextLegend>Score</TextLegend>

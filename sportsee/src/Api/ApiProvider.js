@@ -48,6 +48,7 @@ class ApiProvider {
         .then ( function (response) {
             data = response
         })
+        return data
     }
 }
 

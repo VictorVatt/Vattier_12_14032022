@@ -4,7 +4,7 @@ import ActivityChart from '../components/ActivityChart/ActivityChart';
 import ScoreChart from '../components/ScoreChart/ScoreChart';
 import AverageDurationChart from '../components/AverageDurationChart/AverageDurationChart';
 import PerformanceChart from '../components/PerformanceChart/PerformanceChart'
-import { userInformations, userPerformance } from '../mockedData/mockedData';
+import { userInformations } from '../mockedData/mockedData';
 import { HomePageContainer, MainContentContainer, MainTitle, HeaderContent, ChartsContainer, NutritiveCardContainer, SquareCharts } from './HomeStyle';
 import '../styles/Home.css'
 
@@ -20,7 +20,7 @@ function Home() {
             <ActivityChart id={12} />
             <SquareCharts>
               <AverageDurationChart id={12} />
-              <PerformanceChart data={userPerformance.data} />
+              <PerformanceChart id={18} />
               <ScoreChart id={12} />
             </SquareCharts>
           </div>

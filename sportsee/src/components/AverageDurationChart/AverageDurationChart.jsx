@@ -1,7 +1,16 @@
+import { useState, useEffect } from 'react'
+import ApiProvider from '../../Api/ApiProvider'
 import { LineChart, XAxis, YAxis, Tooltip, Line} from 'recharts'
 import { ChartContainer, ChartTitle } from './AverageDurationChartStyle'
 
-function AverageDurationChart( { data }) {
+function AverageDurationChart( { id }) {
+
+    let [ data, setData ] = useState()
+    useEffect(() => {
+        new ApiProvider().getUserAverageSessionData(id)
+            .then( res => setData(res.data.data.sessions))
+    }, [id])
+
     function formatXAxis(value){
         if (value === 1) return "L"
         if (value === 2) return "M"

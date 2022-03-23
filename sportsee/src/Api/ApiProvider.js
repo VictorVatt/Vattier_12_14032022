@@ -6,16 +6,48 @@ class ApiProvider {
         this.mainUrl = "http://localhost:3000"
     }
 
-    async getMainData(id) {
+    async getMainUserData(id) {
         let data = {};
         let url = `${this.mainUrl}/user/${id}`;
 
         await axios.get(url)
         .then(function (response) {
             data = ApiFormatter.getMainDataFormat(response);
-            console.log(data)
         })
         return data;
+    }
+
+    async getUserActivityData(id) {
+        let data = {}
+        let url = `${this.mainUrl}/user/${id}/activity`
+
+        await axios.get(url)
+        .then (function (response) {
+            data = response
+        })
+        return data
+    }
+
+    async getUserAverageSessionData(id) {
+        let data = {}
+        let url = `${this.mainUrl}/user/${id}/average-sessions`
+
+        await axios.get(url)
+        .then (function (response ) {
+            data = response
+        })
+        
+        return data
+    }
+
+    async getUserPerformance(id) {
+        let data = {}
+        let url = `${this.mainUrl}/user/${id}/performance`
+        
+        await axios.get(url)
+        .then ( function (response) {
+            data = response
+        })
     }
 }
 

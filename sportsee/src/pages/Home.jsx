@@ -18,9 +18,9 @@ function Home() {
         <HeaderContent>Félicitation ! Vous avez explosé vos objectifs hier 👏</HeaderContent>
         <ChartsContainer>
           <div>
-            <ActivityChart data={userActivity.data.sessions} />
+            <ActivityChart id={12} />
             <SquareCharts>
-              <AverageDurationChart data={userAverageSession.data.sessions} />
+              <AverageDurationChart id={12} />
               <PerformanceChart data={userPerformance.data} />
               <ScoreChart data={userInformations.data.score} />
             </SquareCharts>

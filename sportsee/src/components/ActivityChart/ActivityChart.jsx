@@ -1,10 +1,17 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Bar, } from 'recharts'
 import ApiProvider from '../../Api/ApiProvider.js'
 import { BarChartContainer, LegendContainer, LegendItemsContainer, LegendItemContainer, RedDot, BlackDot, LegendTitle } from './ActivityChartStyle'
 
 
-function ActivityChart( {data} ) {
+function ActivityChart( {id} ) {
+    let [ data, setData ] = useState()
+    
+    useEffect(() => {
+        new ApiProvider().getUserActivityData(id)
+            .then( res => setData(res.data.data.sessions))
+    }, [id])
+
     return (
         
         <BarChartContainer>

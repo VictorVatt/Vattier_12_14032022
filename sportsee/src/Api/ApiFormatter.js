@@ -18,10 +18,6 @@ class ApiFormatter {
 
 
 
-
-
-
-
 }
 
 export default ApiFormatter

@@ -1,6 +1,7 @@
 import { MainTitle, HeaderContent } from "../../pages/HomeStyle.jsx"
 import ApiProvider from "../../Api/ApiProvider.js"
 import { useEffect, useState } from "react"
+import PropTypes from "prop-types"
 
 function Welcome( { id } ) {
 
@@ -17,6 +18,10 @@ function Welcome( { id } ) {
             <HeaderContent>Félicitation ! Vous avez explosé vos objectifs hier 👏</HeaderContent>
         </div>
     )
+}
+
+Welcome.propTypes = {
+    id : PropTypes.number.isRequired
 }
 
 export default Welcome

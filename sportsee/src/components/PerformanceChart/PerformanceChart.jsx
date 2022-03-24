@@ -2,6 +2,7 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis } from 'recharts';
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
 import ApiProvider from '../../Api/ApiProvider';
+import PropTypes from 'prop-types'
 
 function PerformanceChart( { id } ) {
 
@@ -33,7 +34,9 @@ function PerformanceChart( { id } ) {
 
 export default PerformanceChart
 
-
+PerformanceChart.propTypes = {
+    id : PropTypes.number.isRequired
+}
 const RadarChartContainer = styled.div`
     width: 258px;
     height: 263px;

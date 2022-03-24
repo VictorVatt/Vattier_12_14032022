@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Bar, } from 'recharts'
 import ApiProvider from '../../Api/ApiProvider.js'
 import { BarChartContainer, LegendContainer, LegendItemsContainer, LegendItemContainer, RedDot, BlackDot, LegendTitle } from './ActivityChartStyle'
+import PropTypes from "prop-types"
 
 
 function ActivityChart( {id} ) {
@@ -28,6 +29,12 @@ function ActivityChart( {id} ) {
         </BarChartContainer>
     )
 }
+
+ActivityChart.propTypes = {
+    id : PropTypes.number.isRequired
+}
+
+export default ActivityChart
 
 function LegendBarChart() {
 
@@ -63,5 +70,7 @@ function CustomTooltip( { payload, active }) {
         } return null
     }
 
-
-export default ActivityChart
+CustomTooltip.propTypes = {
+    payload : PropTypes.array,
+    active : PropTypes.bool
+}

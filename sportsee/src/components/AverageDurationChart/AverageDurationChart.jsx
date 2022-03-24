@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import ApiProvider from '../../Api/ApiProvider'
 import { LineChart, XAxis, YAxis, Tooltip, Line} from 'recharts'
 import { ChartContainer, ChartTitle } from './AverageDurationChartStyle'
+import PropTypes from "prop-types"
 
 function AverageDurationChart( { id }) {
 
@@ -34,10 +35,18 @@ function AverageDurationChart( { id }) {
     )
 }
 
+AverageDurationChart.propTypes = {
+    id : PropTypes.number.isRequired
+}
+
 function CustomPayloadAverage( { payload, active }) {
     if ( active && payload) {
         return <p style={{width : "39px", height: "25px", textAlign: "center", lineHeight: "24px", backgroundColor: "white", fontSize: "10px", borderRadius: "2px"}}>{`${payload[0].value} min`}</p>
     } return null
 }
 
+CustomPayloadAverage.propTypes = {
+    payload : PropTypes.array,
+    active : PropTypes.bool
+}
 export default AverageDurationChart

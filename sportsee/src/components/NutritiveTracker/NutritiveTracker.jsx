@@ -5,6 +5,7 @@ import lipideIcon from '../../assets/lipide-icon.svg'
 import NutritiveCard from '../NutritiveCount/NutritiveCard'
 
 import { useEffect, useState } from 'react'
+import PropTypes from 'prop-types'
 import ApiProvider from '../../Api/ApiProvider.js'
 
 function NutritiveTracker( { id } ) {
@@ -15,8 +16,6 @@ function NutritiveTracker( { id } ) {
         new ApiProvider().getMainUserData(id)
             .then( res => setData(res.keyData))
     }, [id])
-
-
     return (
         <div>
             <NutritiveCard backgroundColor={"rgba(255, 0, 0, 0.1)"} 
@@ -46,6 +45,10 @@ function NutritiveTracker( { id } ) {
         </div>
     )
 
+}
+
+NutritiveTracker.propTypes = {
+    id : PropTypes.number.isRequired
 }
 
 export default NutritiveTracker

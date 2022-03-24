@@ -1,6 +1,7 @@
 import { RadialBarChart, RadialBar, PolarAngleAxis } from 'recharts';
 import { useState, useEffect } from 'react';
 import ApiProvider from '../../Api/ApiProvider';
+import PropTypes from 'prop-types'
 
 
 import { WhiteCircle, ScoreChartContainer, TextLegend, Objectif } from './ScoreChartStyle';
@@ -28,5 +29,7 @@ function ScoreChart( { id }) {
     );
 
 }
-
+ScoreChart.propTypes = {
+  id : PropTypes.number.isRequired
+}
 export default ScoreChart

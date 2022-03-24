@@ -1,4 +1,5 @@
 import { IconContainer, CardContainer, ContentContainer, Icon, Quantity, NutritiveType} from './NutritiveCardStyle'
+import PropTypes from 'prop-types'
 
 
 function NutritiveCard( { backgroundColor, icon, quantity, unity, type } ) {
@@ -16,3 +17,11 @@ function NutritiveCard( { backgroundColor, icon, quantity, unity, type } ) {
     )
 }
 export default NutritiveCard
+
+NutritiveCard.propTypes = {
+    backgroundColor : PropTypes.string.isRequired,
+    icon : PropTypes.string.isRequired,
+    quantity : PropTypes.number,
+    unity : PropTypes.string.isRequired,
+    type : PropTypes.string.isRequired
+}

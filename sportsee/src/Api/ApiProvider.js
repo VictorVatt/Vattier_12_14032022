@@ -5,7 +5,11 @@ class ApiProvider {
     constructor() {
         this.mainUrl = "http://localhost:3000"
     }
-
+    /**
+     * Fetched Main User Data from API
+     * @param {string} id - user id
+     * @returns {Object} data
+     */
     async getMainUserData(id) {
         let data = {};
         let url = `${this.mainUrl}/user/${id}`;
@@ -16,7 +20,11 @@ class ApiProvider {
         })
         return data;
     }
-
+    /**
+     * Fetched User Activity Data from API
+     * @param {string} id - user id
+     * @returns {Object} data
+     */
     async getUserActivityData(id) {
         let data = {}
         let url = `${this.mainUrl}/user/${id}/activity`
@@ -27,7 +35,11 @@ class ApiProvider {
         })
         return data
     }
-
+    /**
+     * Fetched User Average Session Data from API
+     * @param {string} id - user id
+     * @returns {Object} data
+     */
     async getUserAverageSessionData(id) {
         let data = {}
         let url = `${this.mainUrl}/user/${id}/average-sessions`
@@ -39,7 +51,11 @@ class ApiProvider {
         
         return data
     }
-
+    /**
+     * Fetched User Performance from API
+     * @param {string} id - user id
+     * @returns {Object} data
+     */
     async getUserPerformance(id) {
         let data = {}
         let url = `${this.mainUrl}/user/${id}/performance`

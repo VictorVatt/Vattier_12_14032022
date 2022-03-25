@@ -33,7 +33,7 @@ export const SquareCharts = styled.div`
     `
 export const NutritiveCardContainer = styled.div`
     display: flex;
-    margin-top: 77px;
+    margin-top: 50px;
     justify-content: center;
     flex-wrap: wrap;
     @media (min-width: 1440px) {

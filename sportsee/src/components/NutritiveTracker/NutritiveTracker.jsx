@@ -3,6 +3,7 @@ import proteineIcon from '../../assets/proteine-icon.svg'
 import glucideIcon from '../../assets/glucide-icon.svg'
 import lipideIcon from '../../assets/lipide-icon.svg'
 import NutritiveCard from '../NutritiveCount/NutritiveCard'
+import styled from 'styled-components'
 
 import { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
@@ -17,7 +18,7 @@ function NutritiveTracker( { id } ) {
             .then( res => setData(res.keyData))
     }, [id])
     return (
-        <div>
+        <NutritiveTrackerContainer>
             <NutritiveCard backgroundColor={"rgba(255, 0, 0, 0.1)"} 
                            icon={calorieIcon} 
                            unity={"kCal"}
@@ -42,10 +43,18 @@ function NutritiveTracker( { id } ) {
                            type={"Calories"}
                            quantity={data.lipidCount}
                            />
-        </div>
+        </NutritiveTrackerContainer>
     )
-
 }
+
+const NutritiveTrackerContainer = styled.div`
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    @media (min-width: 1440px) {
+        display: block;
+    }`
 
 NutritiveTracker.propTypes = {
     id : PropTypes.number.isRequired

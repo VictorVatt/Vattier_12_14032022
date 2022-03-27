@@ -12,7 +12,7 @@ function AverageDurationChart( { id }) {
             .then( res => setData(res.data.data.sessions))
     }, [id])
 
-    function formatXAxis(value){
+    function formatXAxis(value){ // Définir chaque jour comme un jour de la semaine
         if (value === 1) return "L"
         if (value === 2) return "M"
         if (value === 3) return "M"
@@ -39,7 +39,7 @@ AverageDurationChart.propTypes = {
     id : PropTypes.number.isRequired
 }
 
-function CustomPayloadAverage( { payload, active }) {
+function CustomPayloadAverage( { payload, active }) { // CustomTootltip 
     if ( active && payload) {
         return <p style={{width : "39px", height: "25px", textAlign: "center", lineHeight: "24px", backgroundColor: "white", fontSize: "10px", borderRadius: "2px"}}>{`${payload[0].value} min`}</p>
     } return null
